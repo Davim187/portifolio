@@ -31,42 +31,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const cardContainer = document.getElementById('projects-container');
 
+let numeroOrdens = 0
+
+
 const dados = [
     {
         title: "HostDev",
         date: "20/09/2022",
-        description: "Página de apresentação de serviços de hospedagem de sites e registros de domínios.",
-        tech: ["HTML", "CSS", "JavaScript"],
+        description: "Projeto: uma página de apresentação de serviços de hospedagem de sites e registro de domínios. O objetivo foi criar uma interface clara e funcional, destacando os principais serviços e informações de forma organizada, utilizando HTML, CSS.",
+        tech: ["HTML", "CSS"],
         image: "assets/HostDev.png",
         linkDemo: "https://davim187.github.io/HostDev/",
-        linkCode: "https://github.com/Davim187/HostDev"
+        linkCode: "https://github.com/Davim187/HostDev",
+        numero: ++numeroOrdens
     },
     {
-        title: "Portfólio",
-        date: "10/10/2023",
-        description: "Meu portfólio pessoal, onde apresento meus projetos e habilidades.",
+        title: "Calculador de Idade",
+        date: "06/10/2022",
+        description: "Projeto: um aplicativo que calcula a idade do usuário com base na data de nascimento informada. O objetivo foi criar uma interface simples e intuitiva, aplicando conceitos de HTML, CSS e JavaScript.",
         tech: ["HTML", "CSS", "JavaScript"],
         image: "assets/CalcularImage.png",
-        linkDemo: "https://davim187.github.io/HostDev/",
-        linkCode: "https://github.com/Davim187/HostDev"
+        linkDemo: "https://davim187.github.io/Calcular-idade/",
+        linkCode: "https://github.com/Davim187/Calcular-idade",
+        numero: ++numeroOrdens
     },
     {
-        title: "Projeto n8n",
-        date: "15/11/2023",
-        description: "Automatização de tarefas utilizando n8n para melhorar a eficiência.",
-        tech: ["n8n", "JavaScript"],
-        image: "assets/Mario.png",
-        linkDemo: "https://davim187.github.io/HostDev/",
-        linkCode: "https://github.com/Davim187/HostDev"
+        title: "Calcular Media",
+        date: "21/10/2022",
+        description: "Projeto: uma aplicação que calcula a média de alunos. O objetivo foi criar uma interface simples e intuitiva, aplicando conceitos de HTML, CSS e JavaScript, usando localStorage para armazenamento de dados.",
+        tech: ["HTML", "CSS", "JavaScript"],
+        image: "assets/CalcularMedia.png",
+        linkDemo: "https://davim187.github.io/TableAluno/",
+        linkCode: "https://github.com/Davim187/TableAluno",
+        numero: ++numeroOrdens
     },
     {
-        title: "Projeto n8n",
-        date: "15/11/2023",
-        description: "Automatização de tarefas utilizando n8n para melhorar a eficiência.",
-        tech: ["n8n", "JavaScript"],
-        image: "images/n8n.png",
-        linkDemo: "https://davim187.github.io/HostDev/",
-        linkCode: "https://github.com/Davim187/HostDev"
+        title: "StartSom",
+        date: "17/11/2022",
+        description: "Projeto: uma plataforma desenvolvida em React voltada para explicações e ensinos sobre violão. A aplicação conta com cadastro e login de usuários, além de uma lista de tarefas para organização do aprendizado.",
+        tech: ["JavaScript", "React"],
+        image: "assets/startSom.png",
+        linkDemo: "https://davim187.github.io/StartSom/",
+        linkCode: "https://github.com/Davim187/StartSom",
+        numero: ++numeroOrdens
+    },
+        {
+        title: "Mario",
+        date: "03/05/2023",
+        description: "Projeto: Um jogo simples do Mario, onde o jogador controla o personagem para coletar moedas e evitar obstáculos. Desenvolvido apenas com JavaScript, o jogo oferece uma experiência divertida e interativa.",
+        tech: ["JavaScript"],
+        linkDemo: "https://davim187.github.io/Mario/",
+        linkCode: "https://github.com/Davim187/Mario",
+        numero: ++numeroOrdens
     },
 ];
 
@@ -77,9 +93,9 @@ dados.forEach(dado => {
         <img src="${dado.image}" alt="${dado.title}">
         <div class="project-info">
         <h4>${dado.title}</h4>
-        <p>${dado.date} - Primeiro Projeto.</p>
+        <p>${dado.date}.</p>
         <p>
-              Pagina de apresentação de serviços de hospedagem de sites e encontros de donminios.
+              ${dado.numero}# - ${dado.description}
             </p>
             <div class="tech-tags">
               <span>${dado.tech.join('</span><span>')}</span>

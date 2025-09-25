@@ -80,7 +80,7 @@ const dados = [
         date: "03/05/2023",
         description: "Projeto: Um jogo simples do Mario, onde o jogador controla o personagem para coletar moedas e evitar obstáculos. Desenvolvido apenas com JavaScript, o jogo oferece uma experiência divertida e interativa.",
         tech: ["JavaScript"],
-        image: "assets/mario.png",
+        image: "assets/Mario.png",
         linkDemo: "https://davim187.github.io/Mario/",
         linkCode: "https://github.com/Davim187/Mario",
         numero: ++numeroOrdens

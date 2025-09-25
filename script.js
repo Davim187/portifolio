@@ -75,11 +75,12 @@ const dados = [
         linkCode: "https://github.com/Davim187/StartSom",
         numero: ++numeroOrdens
     },
-        {
+    {
         title: "Mario",
         date: "03/05/2023",
         description: "Projeto: Um jogo simples do Mario, onde o jogador controla o personagem para coletar moedas e evitar obstáculos. Desenvolvido apenas com JavaScript, o jogo oferece uma experiência divertida e interativa.",
         tech: ["JavaScript"],
+        image: "assets/mario.png",
         linkDemo: "https://davim187.github.io/Mario/",
         linkCode: "https://github.com/Davim187/Mario",
         numero: ++numeroOrdens
@@ -111,3 +112,67 @@ dados.forEach(dado => {
     `;
     cardContainer.appendChild(card);
 });
+
+const skill = [
+    {
+    name: "HTML5",
+    class: "bx bxl-html5"
+    },
+    {
+    name: "CSS3",
+    class: "bx bxl-css3"
+    },
+    {
+    name: "JavaScript",
+    class: "bx bxl-javascript"
+    },
+    {
+    name: "TypeScript",
+    class: "bx bxl-typescript"
+    },
+    {
+    name: "React",
+    class: "bx bxl-react"
+    },
+    {
+    name: "React Native",
+    class: "bx bxl-react"
+    },
+    {
+    name: "Node.js",
+    class: "bx bxl-nodejs"
+    },
+    {
+        name: "n8n",
+        class: "bx bxl-n8n"
+    },
+    {
+        name: "Php",
+        class: "bx bxl-php"
+    },
+    {
+    name: "Git",
+    class: "bx bxl-git"
+    },
+    {
+    name: "GitHub",
+    class: "bx bxl-github"
+    },  
+        {
+    name: "python",
+    class: "bx bxl-python"
+    },
+]
+
+    const cardContainerSkill = document.getElementById('skills-container');
+
+   skill.forEach((skill) => {
+    const skillElement = document.createElement('div');
+    skillElement.className = 'skill-item';
+    skillElement.innerHTML = `  
+        <i class='${skill.class}'></i>
+        <span>${skill.name}</span>
+    `;
+    cardContainerSkill.appendChild(skillElement);
+   }) 
+

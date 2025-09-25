@@ -252,24 +252,31 @@ section {
 .contact {
   background: var(--bg-color);
 }
-.projects-container,
-.skills-container {
+.projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;  
+  gap: 2rem;
   justify-content: center;
 }
+
+.project-card{
+  width: 100%;
+  max-width: 42rem;
+  min-width: 40rem;
+  background: var(--second-bg-color);
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-.projects-container {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-  gap: 3rem; */
-}
+
 
 .project-card,
 .skill-item {
@@ -356,6 +363,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
+  width: 15rem;
 }
 .skill-item i {
   font-size: 7.5rem;
@@ -365,7 +373,7 @@ section {
 }
 .skill-item p {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: bold;
   transition: 0.4s ease;
 }
 .skill-item:hover {
@@ -374,6 +382,10 @@ section {
 .skill-item:hover i,
 .skill-item:hover p {
   color: var(--text-color);
+}
+
+.skill-item:hover .bxl-n8n {
+  background-color: var(--text-color);
 }
 
 .testimonial-container {
@@ -460,11 +472,6 @@ section {
   .heading {
     font-size: 4rem;
   }
-  .projects-container,
-  .skills-container,
-  .testimonial-container {
-    /* grid-template-columns: 1fr; */
-  }
 }
 @media (max-width: 450px) {
   .home-img {
@@ -479,4 +486,13 @@ section {
     height: 4rem;
     font-size: 2rem;
   }
+}
+
+.bxl-n8n {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  -webkit-mask: url("/assets/n8n.svg") no-repeat center / contain;
+  mask: url("/assets/n8n.svg") no-repeat center / contain;
+  background-color: var(--main-color);
 }

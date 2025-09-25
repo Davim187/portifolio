@@ -492,7 +492,7 @@ section {
   width: 48px;
   height: 48px;
   display: inline-block;
-  -webkit-mask: url("/assets/n8n.svg") no-repeat center / contain;
-  mask: url("/assets/n8n.svg") no-repeat center / contain;
+  -webkit-mask: url("	https://davim187.github.io/portifolio/assets/n8n.svg") no-repeat center / contain;
+  mask: url("	https://davim187.github.io/portifolio/assets/n8n.svg") no-repeat center / contain;
   background-color: var(--main-color);
 }

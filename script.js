@@ -87,6 +87,8 @@ const dados = [
     },
 ];
 
+
+
 dados.forEach(dado => {
     const card = document.createElement('div');
     card.className = 'project-card';
